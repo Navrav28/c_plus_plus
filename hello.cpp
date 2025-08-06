@@ -103,7 +103,7 @@
 //      return 0;
 //  }
 
-// fectorial
+// fectorial  + sum 
 #include <iostream>
 using namespace std;
 int main()
