@@ -103,19 +103,110 @@
 //      return 0;
 //  }
 
-// fectorial  + sum 
+// fectorial  + sum
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 5, b = 1, c, d=0 ,f;
+//     while (a >= 1)
+//     {
+//         b= b * a;
+//         d = d + a;
+//         a--;
+//     }
+//     cout << "factorial => " << b  << "\n sum " << d << endl;
+
+//     return 0;
+// }
+
+// 1 to 50 table print
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a, b;
+//     a = 1;
+//     while (a <= 50)
+//     {
+//         b = 1;
+//         while (b <= 10)
+//         {
+//             cout << a * b << endl;
+//             b++;
+//         }
+//         a++;
+//     }
+//     return 0;
+// }
+
+// prime number
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int x = 10 ,f = 0, i=2;
+
+//     while (i <= x/2 )
+//     {
+//         if (x% i == 0)
+//         {
+//             f= 1;
+//             break;
+//         }
+//         i++;
+//     }
+
+//     if (f == 1)
+//     {
+//         cout << " not prime no" << endl;
+
+//     }
+//     else
+//     {
+//         cout << "prime no" << endl;
+
+//     }
+// }
+
+// reverse number
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int x = 123, m;
+
+//     while (x>0)
+//     {
+//         m = x % 10;
+//         cout << m << endl;
+//         x = x / 10;
+//     }
+//    return 0;
+
+// }
+// palindrome
 #include <iostream>
 using namespace std;
 int main()
 {
-    int a = 5, b = 1, c, d=0 ,f;
-    while (a >= 1)
+    int x = 757, m, y, z=0;
+    y= x;
+    while (x > 0)
     {
-        b= b * a;
-        d = d + a;
-        a--;
-    }
-    cout << "factorial => " << b  << "\n sum " << d << endl;
+        m = x % 10;
 
+        z = (z * 10) + m;
+        cout << m << endl;
+        x = x / 10;
+    }
+    if (y == z)
+    {
+        cout << "palindrome" << endl;
+    }
+    else
+    {
+        cout << "not palindrome" << endl;
+    }
     return 0;
 }
