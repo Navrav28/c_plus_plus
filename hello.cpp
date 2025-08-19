@@ -186,27 +186,134 @@
 
 // }
 // palindrome
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int x = 757, m, y, z=0;
+//     y= x;
+//     while (x > 0)
+//     {
+//         m = x % 10;
+
+//         z = (z * 10) + m;
+//         cout << m << endl;
+//         x = x / 10;
+//     }
+//     if (y == z)
+//     {
+//         cout << "palindrome" << endl;
+//     }
+//     else
+//     {
+//         cout << "not palindrome" << endl;
+//     }
+//     return 0;
+// }
+
+// 1 ,2, 4,8 ....256
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 1, m;
+//     while (a <= 256)
+//     {
+//         // m = a * a;
+//         cout << a << endl;
+//         a = a * 2;
+//     }
+
+//     return 0;
+
+// }
+
+// 1 10 100 1000 10000
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 1, m;
+//     while (a <= 10000)
+//     {
+//         // m = a * a;
+//         cout << a << endl;
+//         a = a * 10;
+//     }
+
+//     return 0;
+
+// }
+
+// 10000 1000 100 10 1
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 10000, m;
+//     while (a >= 1)
+//     {
+//         // m = a * a;
+//         cout << a << endl;
+//         a = a / 10;
+//     }
+
+//     return 0;
+
+// }
+
+// square 
+//1 2 4 3 9 .....10 100
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 1, m;
+//     while (a <= 10)
+//     {
+//         cout << a << endl;
+
+//         m = a * a;
+//         cout << m << endl;
+//         a++;
+//     }
+
+//     return 0;
+// }
+//cube
+//1 2 8 3 27 .....10 1000
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 1, m;
+//     while (a <= 10)
+//     {
+//         cout << a << endl;
+
+//         m = a * a * a;
+//         cout << m << endl;
+//         a++;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
 #include <iostream>
 using namespace std;
 int main()
 {
-    int x = 757, m, y, z=0;
-    y= x;
-    while (x > 0)
+    int a = 1, m = 1;
+    while (a <= 22)
     {
-        m = x % 10;
+        cout << a << endl;
+        a = a + m;
+        m++;
+    }
 
-        z = (z * 10) + m;
-        cout << m << endl;
-        x = x / 10;
-    }
-    if (y == z)
-    {
-        cout << "palindrome" << endl;
-    }
-    else
-    {
-        cout << "not palindrome" << endl;
-    }
     return 0;
 }
