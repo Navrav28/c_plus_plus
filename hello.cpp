@@ -262,8 +262,8 @@
 
 // }
 
-// square 
-//1 2 4 3 9 .....10 100
+// square
+// 1 2 4 3 9 .....10 100
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -280,8 +280,8 @@
 
 //     return 0;
 // }
-//cube
-//1 2 8 3 27 .....10 1000
+// cube
+// 1 2 8 3 27 .....10 1000
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -299,21 +299,108 @@
 //     return 0;
 // }
 
+// 1 1 2 4 7 11 16 22
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 1, m = 1;
+//     while (a <= 22)
+//     {
+//         cout << a << endl;
+//         a = a + m;
+//         m++;
+//     }
+
+//     return 0;
+// }
+
+// 1 10 2 9 ....10 1
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 1, m = 10;
+//     while (a <= 10)
+//     {
+//         cout << a << endl;
+//         cout << m << endl;
+//         a++;
+//         m--;
+//     }
+
+//     return 0;
+// }
+
+// 0 1 1 2 3 5 8 13 21
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 0, b= 1 ,c =  0 ;
+
+//         cout << a << endl;
+//         cout << b << endl;
+//     while (a < 13)
+//     {
+//         c = a + b;
+//         cout << c << endl;
+//         a = b;
+//         b = c;
+
+//     }
+
+//     return 0;
+// }
+
+// 1024 512 256 128 64
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 1024;
+
+//     while (a >= 64)
+//     {
+
+//         cout << a << endl;
+//         a = a / 2;
+//     }
+
+//     return 0;
+// }
 
 
-
-
+// prime no 2 aproach
 #include <iostream>
 using namespace std;
 int main()
 {
-    int a = 1, m = 1;
-    while (a <= 22)
+    int x = 5, f = 0, i = 2;
+    if (x == 2)
     {
-        cout << a << endl;
-        a = a + m;
-        m++;
+        cout << "prime no" << endl;
+        return 0;
+    }
+    while (i < x)
+    {
+
+        if (x % i == 0)
+        {
+            f = 1;
+            
+        }
+        i++;
     }
 
+    if (f == 0)
+    {
+        cout << " prime no" << endl;
+    }
+    else
+    {
+        cout << " not prime no" << endl;
+    }
     return 0;
 }
