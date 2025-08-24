@@ -371,36 +371,94 @@
 //     return 0;
 // }
 
-
 // prime no 2 aproach
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int x = 5, f = 0, i = 2;
+//     if (x == 2)
+//     {
+//         cout << "prime no" << endl;
+//         return 0;
+//     }
+//     while (i < x)
+//     {
+
+//         if (x % i == 0)
+//         {
+//             f = 1;
+//         }
+//         i++;
+//     }
+
+//     if (f == 0)
+//     {
+//         cout << " prime no" << endl;
+//     }
+//     else
+//     {
+//         cout << " not prime no" << endl;
+//     }
+//     return 0;
+// }
+
+
+// tringle pattern
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int i = 1, j, k, l;
+//     while (i <= 5)
+//     {
+//         k = 1;
+//         while (k < i)
+//         {
+//             cout << " ";
+//             k++;
+//         }
+//         j = i;
+//         while (j <= 5)
+//         {
+//             cout << j << " ";
+//             j++;
+//         }
+//         cout<< endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+
+
+
+// 12345
+//  2345
+//   345
+//    45
+//     5
 #include <iostream>
 using namespace std;
 int main()
 {
-    int x = 5, f = 0, i = 2;
-    if (x == 2)
+    int i = 1, j, k, l;
+    while (i <= 5)
     {
-        cout << "prime no" << endl;
-        return 0;
-    }
-    while (i < x)
-    {
-
-        if (x % i == 0)
+        k = 1;
+        while (k < i)
         {
-            f = 1;
-            
+            cout << " ";
+            k++;
         }
+        j = i;
+        while (j <= 5)
+        {
+            cout << j;
+            j++;
+        }
+        cout<< endl;
         i++;
-    }
-
-    if (f == 0)
-    {
-        cout << " prime no" << endl;
-    }
-    else
-    {
-        cout << " not prime no" << endl;
     }
     return 0;
 }
