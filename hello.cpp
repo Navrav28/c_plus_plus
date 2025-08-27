@@ -438,6 +438,68 @@
 //   345
 //    45
 //     5
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int i = 1, j, k, l;
+//     while (i <= 5)
+//     {
+//         k = 1;
+//         while (k < i)
+//         {
+//             cout << " ";
+//             k++;
+//         }
+//         j = i;
+//         while (j <= 5)
+//         {
+//             cout << j;
+//             j++;
+//         }
+//         cout<< endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+//     1
+//    12
+//   123
+//  1234
+// 12345
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int i = 1, j, k, l;
+//     while (i <= 5)
+//     {
+//         k = 1;
+//         while ( k<=5-i)
+//         {
+//             cout << " ";
+//             k++;
+//         }
+//         j = 1;
+//         while (j <= i)
+//         {
+//             cout << j;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+
+
+//     1
+//    121
+//   12321
+//  1234321
+// 123454321
 #include <iostream>
 using namespace std;
 int main()
@@ -446,19 +508,24 @@ int main()
     while (i <= 5)
     {
         k = 1;
-        while (k < i)
+        while ( k<=5-i)
         {
             cout << " ";
             k++;
         }
-        j = i;
-        while (j <= 5)
+        j = 1;
+        while (j <= i)
         {
             cout << j;
             j++;
         }
-        cout<< endl;
+        l = i - 1;
+        while(l>0){
+            cout << l;
+            l--;
+        }
+        cout << endl;
         i++;
+
     }
-    return 0;
 }
