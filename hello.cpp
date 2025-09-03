@@ -524,30 +524,63 @@
 //     }
 // }
 
-
-
 // 1       3       5       7       9
 // 2       4       6       8       10
 // 3       5       7       9       11
 // 4       6       8       10      12
 // 5       7       9       11      13
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int r = 1, c, num;
+
+//         while (r <= 5)
+//     {
+//         num = r;
+//         c = 1;
+//         while (c <= 5)
+//         {
+//             cout << num << "\t";
+//             num += 2;
+//             c++;
+//         }
+//         cout << endl;
+//         r++;
+//     }
+// }
+
+//  Array start
+// reverse array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[5] = {1, 2, 3, 4, 5};
+//     for (int i = 4; i >= 0; i--)
+//     {
+//         cout << arr[i] << "\t";
+//     }
+//     cout << endl;
+//     return 0;
+// }
+
+
+// copy array 
 #include <iostream>
 using namespace std;
 int main()
 {
-    int r = 1, c, num;
-
-        while (r <= 5)
+    int arr[5] = {1, 2, 3, 4, 5};
+    int x[5] , j = 0;
+    for (int i = 0; i < 5; i++)
     {
-        num = r;
-        c = 1;
-        while (c <= 5)
-        {
-            cout << num << "\t";
-            num += 2;
-            c++;
-        }
-        cout << endl;
-        r++;
+        x[j] = arr[i];
+        j++;
     }
+    for (int i = 0; i <= 4; i++)
+    {
+        cout << x[i] << "\t";
+    }
+    return 0;
 }
