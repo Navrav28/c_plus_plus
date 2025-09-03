@@ -403,7 +403,6 @@
 //     return 0;
 // }
 
-
 // tringle pattern
 // #include <iostream>
 // using namespace std;
@@ -429,9 +428,6 @@
 //     }
 //     return 0;
 // }
-
-
-
 
 // 12345
 //  2345
@@ -493,39 +489,65 @@
 //     return 0;
 // }
 
-
-
 //     1
 //    121
 //   12321
 //  1234321
 // 123454321
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int i = 1, j, k, l;
+//     while (i <= 5)
+//     {
+//         k = 1;
+//         while ( k<=5-i)
+//         {
+//             cout << " ";
+//             k++;
+//         }
+//         j = 1;
+//         while (j <= i)
+//         {
+//             cout << j;
+//             j++;
+//         }
+//         l = i - 1;
+//         while(l>0){
+//             cout << l;
+//             l--;
+//         }
+//         cout << endl;
+//         i++;
+
+//     }
+// }
+
+
+
+// 1       3       5       7       9
+// 2       4       6       8       10
+// 3       5       7       9       11
+// 4       6       8       10      12
+// 5       7       9       11      13
 #include <iostream>
 using namespace std;
 int main()
 {
-    int i = 1, j, k, l;
-    while (i <= 5)
+    int r = 1, c, num;
+
+        while (r <= 5)
     {
-        k = 1;
-        while ( k<=5-i)
+        num = r;
+        c = 1;
+        while (c <= 5)
         {
-            cout << " ";
-            k++;
-        }
-        j = 1;
-        while (j <= i)
-        {
-            cout << j;
-            j++;
-        }
-        l = i - 1;
-        while(l>0){
-            cout << l;
-            l--;
+            cout << num << "\t";
+            num += 2;
+            c++;
         }
         cout << endl;
-        i++;
-
+        r++;
     }
 }
