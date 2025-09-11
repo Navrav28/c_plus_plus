@@ -565,22 +565,198 @@
 //     return 0;
 // }
 
+// copy array  1D
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[5] = {1, 2, 3, 4, 5};
+//     int x[5] , j = 0;
+//     for (int i = 0; i < 5; i++)
+//     {
+//         x[j] = arr[i];
+//         j++;
+//     }
+//     for (int i = 0; i <= 4; i++)
+//     {
+//         cout << x[i] << "\t";
+//     }
+//     return 0;
+// }
 
-// copy array 
+// sum of all elements in 2D array
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//  int arr[3][3]={
+//      {1,2,3,},
+//      {4,5,6},
+//      {7,8,9}
+//      };
+//      int k = 0;
+//      for (int i = 0 ; i<3 ; i++){
+//            for (int j = 0 ; j<3 ; j++){
+//               k = k + arr[i][j];
+//            }
+//      }
+
+//     cout << k;
+
+//     return 0;
+// }
+
+// transpose of matrix 2D array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[2][3] = {
+//         {
+//             1,
+//             2,
+//             3,
+//         },
+//         {4, 5, 6},
+//     };
+//     int arr2[3][2];
+
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             arr2[j][i] = arr[i][j];
+//         }
+//     }
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 2; j++)
+//         {
+//             cout << arr2[i][j] << "\t";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+// copy of matrix 2D array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[2][3] = {
+//         {
+//             1,
+//             2,
+//             3,
+//         },
+//         {4, 5, 6},
+//     };
+//     int arr2[3][2];
+
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             arr2[i][j] = arr[i][j];
+//         }
+//     }
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             cout << arr2[i][j] << "\t";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+// largest no in array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {
+//         2,
+//         8,
+//         3,
+//         6,
+//         10
+//     };
+//     int temp = arr[0];
+
+//     for (int i = 0; i < 5; i++)
+//     {
+//            if (arr[i] > temp){
+//                temp = arr[i];
+//            }
+//     }
+//     cout << "largest no " << temp << endl;
+
+//     return 0;
+// }
+// decending order shorting array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = { 2,1,28,6,10 };
+//     // int arr2[4]={};
+//     // int j = 0;
+//     int temp, i, j;
+
+//     for (i = 0; i < 5; i++)
+//     {
+        
+
+//         for (j = i + 1; j < 5; j++)
+//         {
+//             if (arr[i] < arr[j])
+//             {
+//                 temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+//         }
+//     }
+//     for (i = 0; i < 5; i++)
+//     {
+//         cout << "decending array short " << arr[i] << endl;
+//     }
+
+//     return 0;
+// }
+
+// ascending order shorting array
 #include <iostream>
 using namespace std;
 int main()
 {
-    int arr[5] = {1, 2, 3, 4, 5};
-    int x[5] , j = 0;
-    for (int i = 0; i < 5; i++)
+    int arr[] = { 2,1,28,6,10 };
+    // int arr2[4]={};
+    // int j = 0;
+    int temp, i, j;
+
+    for (i = 0; i < 5; i++)
     {
-        x[j] = arr[i];
-        j++;
+        
+
+        for (j = i + 1; j < 5; j++)
+        {
+            if (arr[i] > arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
     }
-    for (int i = 0; i <= 4; i++)
+    for (i = 0; i < 5; i++)
     {
-        cout << x[i] << "\t";
+        cout << "decending array short " << arr[i] << endl;
     }
+
     return 0;
 }
