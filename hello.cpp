@@ -709,7 +709,6 @@
 
 //     for (i = 0; i < 5; i++)
 //     {
-        
 
 //         for (j = i + 1; j < 5; j++)
 //         {
@@ -730,33 +729,115 @@
 // }
 
 // ascending order shorting array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = { 2,1,28,6,10 };
+//     // int arr2[4]={};
+//     // int j = 0;
+//     int temp, i, j;
+
+//     for (i = 0; i < 5; i++)
+//     {
+
+//         for (j = i + 1; j < 5; j++)
+//         {
+//             if (arr[i] > arr[j])
+//             {
+//                 temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+//         }
+//     }
+//     for (i = 0; i < 5; i++)
+//     {
+//         cout << "decending array short " << arr[i] << endl;
+//     }
+
+//     return 0;
+// }
+// occuring array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {2, 2, 1, 8, 1, 10 ,8};
+//     int arr2[4]={};
+//     int k = 0;
+//     // int j = 0;
+//     int temp, i, j;
+
+//     for (i = 0; i < 7; i++)
+//     {
+
+//         for (j = i + 1; j < 7; j++)
+//         {
+//             if (arr[i] == arr[j])
+//             {
+//                arr2[k] = arr[j];
+//                k++;
+//             }
+//         }
+//     }
+//     for (i = 0; i < k; i++)
+//     {
+//         cout << "occuring array " << arr2[i] << endl;
+//     }
+
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 int main()
 {
-    int arr[] = { 2,1,28,6,10 };
-    // int arr2[4]={};
+    int arr[] = {
+        2,
+        9,
+        7,
+        11,
+        3,
+    };
+    int arr2[4] = {};
+    int k = 2;
     // int j = 0;
-    int temp, i, j;
+    int f = 0, i, j ,l=0;
 
-    for (i = 0; i < 5; i++)
-    {
-        
-
-        for (j = i + 1; j < 5; j++)
+    for (i = 0; i < 5; i++){
+       f = 0;
+       for (j = 2; j < arr[i]; j++)
+       {
+        if (arr[i] % j == 0)
         {
-            if (arr[i] > arr[j])
-            {
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
+            f = 1;
+            // break;
+            // cout << "hhh " << endl;
+
         }
+        }
+        if (f == 0)
+        {
+            arr2[l] = arr[i];
+            // cout << "aaa " << endl;
+            l++;
+        }
+     
+      
     }
-    for (i = 0; i < 5; i++)
+    for (i = 0; i < 4; i++)
     {
-        cout << "decending array short " << arr[i] << endl;
+        cout << "these are prime num in  array " << arr2[i] << endl;
     }
 
     return 0;
 }
+
+
+   // else if (arr[i] == 2)
+        // {
+        //     arr2[l] = arr[i];
+        //     // cout << "ccc " << endl;
+        //     l++;
+        // }
