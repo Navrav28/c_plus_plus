@@ -788,56 +788,144 @@
 
 //     return 0;
 // }
+// fetch prime no. in array 
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {
+//         2,
+//         9,
+//         7,
+//         11,
+//         3,
+//     };
+//     int arr2[4] = {};
+//     int k = 2;
+//     // int j = 0;
+//     int f = 0, i, j ,l=0;
+
+//     for (i = 0; i < 5; i++){
+//        f = 0;
+//        for (j = 2; j < arr[i]; j++)
+//        {
+//         if (arr[i] % j == 0)
+//         {
+//             f = 1;
+//             // break;
+//             // cout << "hhh " << endl;
+
+//         }
+//         }
+//         if (f == 0)
+//         {
+//             arr2[l] = arr[i];
+//             // cout << "aaa " << endl;
+//             l++;
+//         }
+     
+      
+//     }
+//     for (i = 0; i < 4; i++)
+//     {
+//         cout << "these are prime num in  array " << arr2[i] << endl;
+//     }
+
+//     return 0;
+// }
+
+//  2 array merge in another array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = { 2,1,28,3,11 };
+//     int arr2[] = { 9,1,6,7,10 };
+//     int l = 0;
+//     // int arr2[4]={};
+//     // int j = 0;
+//     int temp, i, j , c[]={} ;
+
+//     for (i = 0; i < 5; i++)
+//     {
+//         c[i] = arr[i];
+     
+//     }
+//         for (i = 0; i < 5; i++)
+//     {
+//         c[i] = arr2[i];
+       
+//     }
+//         for (i = 0; i < 10; i++)
+//     {
+       
+//         for (j = i + 1; j < 10; j++)
+//         {
+//             if ( c[i]  > c[j])
+//             {
+//                 temp = c[i];
+//                 c[i] = c[j];
+//                 c[j] = temp;
+//             }
+//         }
+//     }
+//     for (i = 0; i < 10; i++)
+//     {
+//         cout << "decending array short " << c[i] << endl;
+//     }
+
+//     return 0;
+// }
+// number search in array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {2, 4, 3, 8};
+//     int search = 4, i;
+//     for ( i = 0; i < 4; i++)
+//     {
+//       if (arr[i]==search)
+//       {
+         
+//           cout << "number searched" << arr[i];
+          
+//       }
+
+      
+//     }
+//     for ( i = 0; i < 4; i++)
+//     {
+//        cout << "number repleced" << arr[i] << endl;
+//     }
+    
+
+//     return 0;
+// } 
 
 #include <iostream>
 using namespace std;
 int main()
 {
-    int arr[] = {
-        2,
-        9,
-        7,
-        11,
-        3,
-    };
-    int arr2[4] = {};
-    int k = 2;
-    // int j = 0;
-    int f = 0, i, j ,l=0;
+    int arr[] = {2, 4, 3, 8};
+    int searchNum = 4, i;
+    for ( i = 0; i < 4; i++)
+    {
+      if (arr[i]==searchNum)
+      {
+          arr[i] = 10;
+        //   cout << "number searched" << arr[i];
+          
+      }
 
-    for (i = 0; i < 5; i++){
-       f = 0;
-       for (j = 2; j < arr[i]; j++)
-       {
-        if (arr[i] % j == 0)
-        {
-            f = 1;
-            // break;
-            // cout << "hhh " << endl;
-
-        }
-        }
-        if (f == 0)
-        {
-            arr2[l] = arr[i];
-            // cout << "aaa " << endl;
-            l++;
-        }
-     
       
     }
-    for (i = 0; i < 4; i++)
+    for ( i = 0; i < 4; i++)
     {
-        cout << "these are prime num in  array " << arr2[i] << endl;
+       cout << "number repleced " << arr[i] << endl;
     }
+    
 
     return 0;
-}
+} 
 
-
-   // else if (arr[i] == 2)
-        // {
-        //     arr2[l] = arr[i];
-        //     // cout << "ccc " << endl;
-        //     l++;
-        // }
