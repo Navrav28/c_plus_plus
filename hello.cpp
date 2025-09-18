@@ -788,7 +788,7 @@
 
 //     return 0;
 // }
-// fetch prime no. in array 
+// fetch prime no. in array
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -823,8 +823,7 @@
 //             // cout << "aaa " << endl;
 //             l++;
 //         }
-     
-      
+
 //     }
 //     for (i = 0; i < 4; i++)
 //     {
@@ -849,16 +848,16 @@
 //     for (i = 0; i < 5; i++)
 //     {
 //         c[i] = arr[i];
-     
+
 //     }
 //         for (i = 0; i < 5; i++)
 //     {
 //         c[i] = arr2[i];
-       
+
 //     }
 //         for (i = 0; i < 10; i++)
 //     {
-       
+
 //         for (j = i + 1; j < 10; j++)
 //         {
 //             if ( c[i]  > c[j])
@@ -887,45 +886,82 @@
 //     {
 //       if (arr[i]==search)
 //       {
-         
+
 //           cout << "number searched" << arr[i];
-          
+
 //       }
 
-      
 //     }
 //     for ( i = 0; i < 4; i++)
 //     {
 //        cout << "number repleced" << arr[i] << endl;
 //     }
-    
 
 //     return 0;
-// } 
+// }
+// replce number in array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {2, 4, 3, 8};
+//     int searchNum = 4, i;
+//     for ( i = 0; i < 4; i++)
+//     {
+//       if (arr[i]==searchNum)
+//       {
+//           arr[i] = 10;
+//         //   cout << "number searched" << arr[i];
 
+//       }
+
+//     }
+//     for ( i = 0; i < 4; i++)
+//     {
+//        cout << "number repleced " << arr[i] << endl;
+//     }
+
+//     return 0;
+// }
+// second largest number in array
 #include <iostream>
 using namespace std;
 int main()
 {
-    int arr[] = {2, 4, 3, 8};
-    int searchNum = 4, i;
-    for ( i = 0; i < 4; i++)
+  int arr[50], i, j = 0, n, lrg, lrg2nd;
+
+  cout << "enter the size of array " << endl;
+  cin >> n;
+  for (i = 0; i < n; i++)
+  {
+    cin >> arr[i];
+  }
+  lrg = 0;
+  for (i = 0; i < n; i++)
+  {
+    if (lrg < arr[i])
     {
-      if (arr[i]==searchNum)
+      lrg = arr[i];
+      j = i;
+    }
+  }
+  lrg2nd = 0;
+  for (i = 0; i < n; i++)
+  {
+    if (i == j)
+    {
+      i++;
+      i--;
+        }
+    else
+    {
+      if (lrg2nd < arr[i])
       {
-          arr[i] = 10;
-        //   cout << "number searched" << arr[i];
-          
+        lrg2nd = arr[i];
       }
-
-      
     }
-    for ( i = 0; i < 4; i++)
-    {
-       cout << "number repleced " << arr[i] << endl;
-    }
-    
-
+   
+  }
+   cout << "second largest number is " << lrg2nd << endl;
     return 0;
-} 
-
+}
