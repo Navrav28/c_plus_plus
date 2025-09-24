@@ -968,13 +968,61 @@
 //     return 0;
 // }
 
+// delete number in array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int arr[50], i, j, n, s, f = 0;
+//   cout << "enter the size of array " << endl;
+//   cin >> n;
+//   for (i = 0; i < n; i++)
+//   {
+//     cout << "enter the element in array " << endl;
 
-// delete number in array 
+//     cin >> arr[i];
+//   }
+//   cout << "enter the number to delete " << endl;
+//   cin >> s;
+//   for (i = 0; i < n; i++)
+//   {
+
+//     if (arr[i] == s)
+//       f = 1;
+//     {
+//       for (j = i; j < n - 1; j++)
+//       {
+//         arr[j] = arr[j + 1];
+//         // cout << arr[j];
+//       }
+//       n--;
+//       break;
+//     }
+
+//   }
+
+//   if (f == 1)
+//   {
+//     for (i = 0; i < n; i++)
+//     {
+//       cout << arr[i] << '\t';
+//     }
+//   }
+//   else
+//   {
+//     cout << "element not found " << endl;
+//   }
+
+//   return 0;
+// }
+
+// remove duplicate number in array
 #include <iostream>
 using namespace std;
 int main()
 {
-  int arr[50], i, j, n, s, f = 0;
+  int arr[50], i, j, n, s, f = 0, k;
+
   cout << "enter the size of array " << endl;
   cin >> n;
   for (i = 0; i < n; i++)
@@ -983,35 +1031,27 @@ int main()
 
     cin >> arr[i];
   }
-  cout << "enter the number to delete " << endl;
-  cin >> s;
+  // cout << "enter the number to delete " << endl;
+  // cin >> s;
   for (i = 0; i < n; i++)
   {
 
-    if (arr[i] == s)
-      f = 1;
+    for (j = i + 1; j < n; j++)
     {
-      for (j = i; j < n - 1; j++)
+      if (arr[i] == arr[j])
       {
-        arr[j] = arr[j + 1];
-        // cout << arr[j];
+        for (k = j; k < n - 1; k++)
+        {
+          arr[k] = arr[k + 1];
+        }
+        n--;
       }
-      n--;
-      break;
-    }
-
-  }
-
-  if (f == 1)
-  {
-    for (i = 0; i < n; i++)
-    {
-      cout << arr[i] << '\t';
     }
   }
-  else
+
+  for (i = 0; i < n; i++)
   {
-    cout << "element not found " << endl;
+    cout << arr[i] << '\t';
   }
 
   return 0;
