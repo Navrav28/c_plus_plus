@@ -924,44 +924,95 @@
 //     return 0;
 // }
 // second largest number in array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int arr[50], i, j = 0, n, lrg, lrg2nd;
+
+//   cout << "enter the size of array " << endl;
+//   cin >> n;
+//   for (i = 0; i < n; i++)
+//   {
+//     cin >> arr[i];
+//   }
+//   // finding location of large number
+//   lrg = 0;
+//   for (i = 0; i < n; i++)
+//   {
+//     if (lrg < arr[i])
+//     {
+//       lrg = arr[i];
+//       j = i;
+//     }
+//   }
+//   // ignoring largest number  and finding second largest
+//   lrg2nd = 0;
+//   for (i = 0; i < n; i++)
+//   {
+//     if (i == j)
+//     {
+//       i++;
+//       i--;
+//         }
+//     else
+//     {
+//       if (lrg2nd < arr[i])
+//       {
+//         lrg2nd = arr[i];
+//       }
+//     }
+
+//   }
+//    cout << "second largest number is " << lrg2nd << endl;
+//     return 0;
+// }
+
+
+// delete number in array 
 #include <iostream>
 using namespace std;
 int main()
 {
-  int arr[50], i, j = 0, n, lrg, lrg2nd;
-
+  int arr[50], i, j, n, s, f = 0;
   cout << "enter the size of array " << endl;
   cin >> n;
   for (i = 0; i < n; i++)
   {
+    cout << "enter the element in array " << endl;
+
     cin >> arr[i];
   }
-  lrg = 0;
+  cout << "enter the number to delete " << endl;
+  cin >> s;
   for (i = 0; i < n; i++)
   {
-    if (lrg < arr[i])
+
+    if (arr[i] == s)
+      f = 1;
     {
-      lrg = arr[i];
-      j = i;
-    }
-  }
-  lrg2nd = 0;
-  for (i = 0; i < n; i++)
-  {
-    if (i == j)
-    {
-      i++;
-      i--;
-        }
-    else
-    {
-      if (lrg2nd < arr[i])
+      for (j = i; j < n - 1; j++)
       {
-        lrg2nd = arr[i];
+        arr[j] = arr[j + 1];
+        // cout << arr[j];
       }
+      n--;
+      break;
     }
-   
+
   }
-   cout << "second largest number is " << lrg2nd << endl;
-    return 0;
+
+  if (f == 1)
+  {
+    for (i = 0; i < n; i++)
+    {
+      cout << arr[i] << '\t';
+    }
+  }
+  else
+  {
+    cout << "element not found " << endl;
+  }
+
+  return 0;
 }
