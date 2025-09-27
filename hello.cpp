@@ -1017,12 +1017,53 @@
 // }
 
 // remove duplicate number in array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int arr[50], i, j, n, s, f = 0, k;
+
+//   cout << "enter the size of array " << endl;
+//   cin >> n;
+//   for (i = 0; i < n; i++)
+//   {
+//     cout << "enter the element in array " << endl;
+
+//     cin >> arr[i];
+//   }
+//   // cout << "enter the number to delete " << endl;
+//   // cin >> s;
+//   for (i = 0; i < n; i++)
+//   {
+
+//     for (j = i + 1; j < n; j++)
+//     {
+//       if (arr[i] == arr[j])
+//       {
+//         for (k = j; k < n - 1; k++)
+//         {
+//           arr[k] = arr[k + 1];
+//         }
+//         n--;
+//       }
+//     }
+//   }
+
+//   for (i = 0; i < n; i++)
+//   {
+//     cout << arr[i] << '\t';
+//   }
+
+//   return 0;
+// }
+
+// check array element is palindrome or not 
+
 #include <iostream>
 using namespace std;
 int main()
 {
-  int arr[50], i, j, n, s, f = 0, k;
-
+  int arr[50], i, j, n, f = 0;
   cout << "enter the size of array " << endl;
   cin >> n;
   for (i = 0; i < n; i++)
@@ -1031,28 +1072,23 @@ int main()
 
     cin >> arr[i];
   }
-  // cout << "enter the number to delete " << endl;
-  // cin >> s;
-  for (i = 0; i < n; i++)
+  int start = 0;
+  int end = n - 1;
+  for (; start < end; start++, end--)
   {
-
-    for (j = i + 1; j < n; j++)
+    if (arr[start] != arr[end])
     {
-      if (arr[i] == arr[j])
-      {
-        for (k = j; k < n - 1; k++)
-        {
-          arr[k] = arr[k + 1];
-        }
-        n--;
-      }
+      f = 1;
+      break;
     }
   }
-
-  for (i = 0; i < n; i++)
+  if (f == 0)
   {
-    cout << arr[i] << '\t';
+    cout << "this array is palindrome " << endl;
   }
-
+  else
+  {
+    cout << "this array is not palindrome " << endl;
+  }
   return 0;
 }
