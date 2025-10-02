@@ -1057,13 +1057,49 @@
 //   return 0;
 // }
 
-// check array element is palindrome or not 
+// check array element is palindrome or not
 
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//   int arr[50], i, j, n, f = 0;
+//   cout << "enter the size of array " << endl;
+//   cin >> n;
+//   for (i = 0; i < n; i++)
+//   {
+//     cout << "enter the element in array " << endl;
+
+//     cin >> arr[i];
+//   }
+//   int start = 0;
+//   int end = n - 1;
+//   for (; start < end; start++, end--)
+//   {
+//     if (arr[start] != arr[end])
+//     {
+//       f = 1;
+//       break;
+//     }
+//   }
+//   if (f == 0)
+//   {
+//     cout << "this array is palindrome " << endl;
+//   }
+//   else
+//   {
+//     cout << "this array is not palindrome " << endl;
+//   }
+//   return 0;
+// }
+
+
+// insert one element in array
 #include <iostream>
 using namespace std;
 int main()
 {
-  int arr[50], i, j, n, f = 0;
+  int arr[50], i, j, n, insert;
   cout << "enter the size of array " << endl;
   cin >> n;
   for (i = 0; i < n; i++)
@@ -1072,23 +1108,22 @@ int main()
 
     cin >> arr[i];
   }
-  int start = 0;
-  int end = n - 1;
-  for (; start < end; start++, end--)
+  cout << "enter the element to insert " << endl;
+  cin >> insert;
+  cout << "print old element array " << endl;
+  for (i = 0; i < n; i++)
   {
-    if (arr[start] != arr[end])
-    {
-      f = 1;
-      break;
-    }
+    cout << arr[i] << '\t';
   }
-  if (f == 0)
+
+  cout << endl;
+  arr[n] = insert;
+  n++;
+  
+ cout << "print new element array "<< endl;
+  for (i = 0; i < n; i++)
   {
-    cout << "this array is palindrome " << endl;
-  }
-  else
-  {
-    cout << "this array is not palindrome " << endl;
+    cout << arr[i] << '\t';
   }
   return 0;
 }
